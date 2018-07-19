@@ -28,19 +28,6 @@ class BBC_Registration
     sleep 1
   end
 
-  def choose_birthday_day(dd)
-    fill_in BIRTHDAY_DAY, with: "#{dd}"
-  end
-
-  def choose_birthday_month(mm)
-    fill_in BIRTHDAY_MONTH, with: "#{mm}"
-  end
-
-  def choose_birthday_year(yyyy)
-    fill_in BIRTHDAY_YEAR, with: "#{yyyy}"
-    sleep 1
-  end
-
   def confirm_birthday
     find(CONFIRM_BIRTHDAY_LINK).click # OR
     # click_button 'Continue'
@@ -60,8 +47,8 @@ class BBC_Registration
     fill_in POSTCODE, with: postcode
   end
 
-  def select_gender
-    select 'Male', from: GENDER_DROPDOWN
+  def select_gender(gender)
+    select gender, from: GENDER_DROPDOWN
   end
 
   def click_no_thanks

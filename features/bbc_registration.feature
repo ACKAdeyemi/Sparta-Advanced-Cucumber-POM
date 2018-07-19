@@ -19,12 +19,15 @@ Feature: BBC Registration
     |  | 03 | 1990 | Oops, that day doesn't look right. Make sure it's a real date written as DD-MM-YYYY e.g. the 5th of June 2009 is 05-06-2009. |
     | a | b | c | Oops, that date doesn't look right. Make sure it's a real date written as DD-MM-YYYY e.g. the 5th of June 2009 is 05-06-2009. |
 
+  @reg_test_postcode_input
+  Scenario Outline: Inputting an invalid postcode credential whilst all other credentials are correct shows an error
+    Given I access the BBC Register page
+      And I click thirteen or over
+      And I input valid birthday values for all three fields and click continue <dd> <mm> <yyyy>
+      And I input valid values for every necessary field except the postcode field <password> <postcode> <gender>
+    When I try to register
+    Then I receive the following invalid postcode error: <error>
 
-  #
-  # Scenario: Inputting an invalid postcode credential whilst all other credentials are correct shows an error
-  #   Given I access the BBC Register page
-  #     And I click thirteen or over
-  #     And I input valid birthday values for all three fields and click continue
-  #     And I input valid values for every necessary field except the postcode field
-  #   When I try to register
-  #   Then I receive an invalid postcode error
+    Examples:
+    | dd | mm | yyyy | password | postcode | gender | error |
+    | 02 | 03 | 1990 | a98yhn32 | TW10 | Male | Sorry, that postcode's too short. Please check it's a proper postcode. |
