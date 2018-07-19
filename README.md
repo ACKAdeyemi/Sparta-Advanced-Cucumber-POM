@@ -2,12 +2,13 @@
 
 #### Task:
 
-To create an advanced Page Object Model using Cucumber, creating an automated user journey through a website and test for expected failures.
+To create an advanced Page Object Model using Cucumber, creating an automated user journey through a website and test for expected failures manipulating Cucumber tables using REGEX and GREP to get data from tables and pass them to the tests, ultimately making code D.R.Y.
 
 This task makes use of:
 
 * Ruby
 * Cucumber (for web automation)
+* Cucumber tables
 * RSpec (for testing)
 * [Minute Inbox](https://www.minuteinbox.com)
 
