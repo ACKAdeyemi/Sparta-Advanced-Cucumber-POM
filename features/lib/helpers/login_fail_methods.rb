@@ -70,7 +70,7 @@ class LoginFailMethod
     find(EMAIL_MESSAGE_DIV).text
   end
 
-  # 8 - DYNAMIC USERNAME/EMAIL ERROR§
+  # 8 - DYNAMIC USERNAME/EMAIL ERROR
   def username_email_error_div
     page.has_selector?(EMAIL_MESSAGE_DIV)
   end
@@ -79,7 +79,7 @@ class LoginFailMethod
     find(EMAIL_MESSAGE_DIV).text
   end
 
-  # 9 - DYNAMIC PASSWORRD ERROR§
+  # 9 - DYNAMIC PASSWORRD ERROR
   def password_error_div
     page.has_selector?(PASSWORD_MESSAGE_DIV)
   end

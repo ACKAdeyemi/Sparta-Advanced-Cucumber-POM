@@ -21,16 +21,23 @@ class BBC_Registration
     sleep 3
   end
 
-  def choose_birthday_day(day)
-    fill_in BIRTHDAY_DAY, with: day
+  def enter_date_of_birth(dd,mm,yyyy)
+    fill_in BIRTHDAY_DAY, with: "#{dd}"
+    fill_in BIRTHDAY_MONTH, with: "#{mm}"
+    fill_in BIRTHDAY_YEAR, with: "#{yyyy}"
+    sleep 1
   end
 
-  def choose_birthday_month(month)
-    fill_in BIRTHDAY_MONTH, with: month
+  def choose_birthday_day(dd)
+    fill_in BIRTHDAY_DAY, with: "#{dd}"
   end
 
-  def choose_birthday_year(year)
-    fill_in BIRTHDAY_YEAR, with: year
+  def choose_birthday_month(mm)
+    fill_in BIRTHDAY_MONTH, with: "#{mm}"
+  end
+
+  def choose_birthday_year(yyyy)
+    fill_in BIRTHDAY_YEAR, with: "#{yyyy}"
     sleep 1
   end
 

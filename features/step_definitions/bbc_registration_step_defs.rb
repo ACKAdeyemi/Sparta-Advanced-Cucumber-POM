@@ -10,10 +10,14 @@ Given("I click thirteen or over") do
   @bbc_site.bbc_registration.click_13_or_over
 end
 
-Given("I don't input any birthday details") do
-  @bbc_site.bbc_registration.choose_birthday_day('')
-  @bbc_site.bbc_registration.choose_birthday_month('')
-  @bbc_site.bbc_registration.choose_birthday_year('')
+Given(/^I input an invalid date of birth value (.*) (.*) (.*)$/) do |dd,mm,yyyy|
+  @bbc_site.bbc_registration.enter_date_of_birth(dd,mm,yyyy)
+end
+
+Given(/^I don't input any birthday details (.*)$/) do |dd,mm,yyyy|
+  @bbc_site.bbc_registration.choose_birthday_day(dd)
+  @bbc_site.bbc_registration.choose_birthday_month(mm)
+  @bbc_site.bbc_registration.choose_birthday_year(yyyy)
 end
 
 When("I try to continue") do
@@ -21,9 +25,9 @@ When("I try to continue") do
   @bbc_site.tab_control.wait(1)
 end
 
-Then("I receive an invalid birthday error") do
+Then(/^I receive the following invalid birthday error: (.*)$/) do |error|
   expect(@bbc_site.registration_fail_methods.invalid_birthday_error_div).to eq true
-  expect(@bbc_site.registration_fail_methods.invalid_birthday_error_message).to eq 'Oops, that date doesn\'t look right. Make sure it\'s a real date written as DD-MM-YYYY e.g. the 5th of June 2009 is 05-06-2009.'
+  expect(@bbc_site.registration_fail_methods.invalid_birthday_error_message).to eq "#{error}"
 end
 
 Given("I only input a valid value in the day field") do
