@@ -18,7 +18,7 @@ class BBC_Registration
 
   def click_13_or_over
     click_link(THIRTEEN_OR_OVER_LINK)
-    sleep 3
+    sleep 2
   end
 
   def enter_date_of_birth(dd,mm,yyyy)
@@ -29,32 +29,20 @@ class BBC_Registration
   end
 
   def confirm_birthday
-    find(CONFIRM_BIRTHDAY_LINK).click # OR
-    # click_button 'Continue'
+    find(CONFIRM_BIRTHDAY_LINK).click
     sleep 2
   end
 
-  def fill_email(email)
-    # fill_in EMAIL, with: 'nxy52422@molms.com'
-    fill_in EMAIL, with: (email)
-  end
-
-  def fill_password(password)
-    fill_in PASSWORD, with: (password)
-  end
-
-  def fill_postcode(postcode)
+  def fill_registration(email, password, postcode, gender)
+    fill_in EMAIL, with: email
+    sleep 1
+    fill_in PASSWORD, with: password
+    sleep 1
     fill_in POSTCODE, with: postcode
-  end
-
-  def select_gender(gender)
+    sleep 1
     select gender, from: GENDER_DROPDOWN
-  end
+    sleep 1
 
-  def click_no_thanks
-    # all(NO_THANKS_LINK)[1].click
-
-    # better method
     all(NO_THANKS_LINK).each do |x|
       if x.text == 'No, thanks'
         x.click
@@ -66,14 +54,6 @@ class BBC_Registration
   def submit_registration
     find(SUBMIT_REGISTRATION).click
     sleep 3
-  end
-
-  def verify_reg
-    has_content?('You\'re now signed in')
-  end
-
-  def confirm_register_tag
-    page.find('title').text
   end
 
 end

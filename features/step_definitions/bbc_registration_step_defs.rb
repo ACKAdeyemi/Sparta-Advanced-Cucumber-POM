@@ -35,11 +35,7 @@ Given(/^I input valid values for every necessary field except the postcode field
   @bbc_site.tab_control.switch_to_tab_one
   email = @bbc_site.get_temp_email.get_email
   @bbc_site.tab_control.switch_to_tab_two
-  @bbc_site.bbc_registration.fill_email(email)
-  @bbc_site.bbc_registration.fill_password(password)
-  @bbc_site.bbc_registration.fill_postcode(postcode)
-  @bbc_site.bbc_registration.select_gender(gender)
-  @bbc_site.bbc_registration.click_no_thanks
+  @bbc_site.bbc_registration.fill_registration(email, password, postcode, gender)
 end
 
 When("I try to register") do
