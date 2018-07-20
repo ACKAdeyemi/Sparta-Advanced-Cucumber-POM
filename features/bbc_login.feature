@@ -1,5 +1,6 @@
 Feature: BBC Login
 
+  @login_test_incorrect_email_password
   Scenario Outline: Inputting incorrect username/email and incorrect password credentials shows an error
     Given I access the BBC login page
       And I input incorrect username or email details <email>
@@ -14,6 +15,7 @@ Feature: BBC Login
     | a@a | abcdefgh | Sorry, that email doesn’t look right. Please check it's a proper email. | Sorry, that password isn't valid. Please include something that isn't a letter. |
     | a.a | 12345678 | Usernames can only include... Letters, numbers and these characters: ?/\|}{+=_-^~`%$# | Sorry, that password isn't valid. Please include a letter. |
 
+  @login_test_incorrect_email
   Scenario Outline: Inputting incorrect username/email and correct password credentials shows an error
     Given I access the BBC login page
       And I input incorrect username or email details <email>
@@ -27,6 +29,7 @@ Feature: BBC Login
     | a@a | rt74b2n1 | Sorry, that email doesn’t look right. Please check it's a proper email. |
     | a.a | rt74b2n1 | Usernames can only include... Letters, numbers and these characters: ?/\|}{+=_-^~`%$# |
 
+  @login_test_incorrect_password
   Scenario Outline: Inputting correct username and incorrect password credentials shows an error
     Given I access the BBC login page
       And I input correct username or email details <email>

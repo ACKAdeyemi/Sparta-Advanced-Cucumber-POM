@@ -6,8 +6,7 @@ class BBC_Homepage
   # constants
   HOMEPAGE_URL = 'http://www.bbc.co.uk'
   SIGN_IN_LINK_ID = '#idcta-username' # for ID attribute
-  # REGISTER_LINK = 'Register now' # OR
-  REGISTER_LINK_2 = '.link--primary' # for class attribute
+  REGISTER_LINK = '.link--primary' # for class attribute
 
   def visit_home_page
     window = page.driver.browser.window_handles
@@ -31,8 +30,7 @@ class BBC_Homepage
   end
 
   def click_register_link
-    # click_link(REGISTER_LINK) # OR
-    find(REGISTER_LINK_2).click
+    find(REGISTER_LINK).click
     sleep 1
   end
 

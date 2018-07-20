@@ -1,5 +1,4 @@
 Given("I access the BBC Register page") do
-  @bbc_site = BBC_Site.new
   @bbc_site.get_temp_email.visit_minute_inbox
   @bbc_site.bbc_homepage.visit_home_page
   @bbc_site.bbc_homepage.click_sign_in_link
