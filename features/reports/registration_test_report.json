@@ -1,0 +1,1203 @@
+[
+  {
+    "uri": "features/bbc_registration.feature",
+    "id": "bbc-registration",
+    "keyword": "Feature",
+    "name": "BBC Registration",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "id": "bbc-registration;inputting-incorrent-birthday-credentials-that-output-different-errors;;2",
+        "keyword": "Scenario Outline",
+        "name": "Inputting incorrent birthday credentials that output different errors",
+        "description": "",
+        "line": 13,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@reg_test_birthday_input",
+            "line": 3
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27000
+            }
+          },
+          {
+            "output": [
+              "Loading Test scenario..."
+            ],
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I access the BBC Register page",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16940658000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click thirteen or over",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8067956000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I input an invalid date of birth value   ",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1312892000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I try to continue",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8111692000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I receive the following invalid birthday error: Oops, that date doesn't look right. Make sure it's a real date written as DD-MM-YYYY e.g. the 5th of June 2009 is 05-06-2009.",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 98911000
+            }
+          }
+        ],
+        "after": [
+          {
+            "output": [
+              "Test scenario successully complete."
+            ],
+            "match": {
+              "location": "features/support/hooks.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3003546000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 271684000
+            }
+          }
+        ]
+      },
+      {
+        "id": "bbc-registration;inputting-incorrent-birthday-credentials-that-output-different-errors;;3",
+        "keyword": "Scenario Outline",
+        "name": "Inputting incorrent birthday credentials that output different errors",
+        "description": "",
+        "line": 14,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@reg_test_birthday_input",
+            "line": 3
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 94000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 98000
+            }
+          },
+          {
+            "output": [
+              "Loading Test scenario..."
+            ],
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I access the BBC Register page",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6929761000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click thirteen or over",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2311863000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I input an invalid date of birth value 02  ",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1409794000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I try to continue",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3094902000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I receive the following invalid birthday error: Oops, that month and year don't look right. Make sure it's a real date written as DD-MM-YYYY e.g. the 5th of June 2009 is 05-06-2009.",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 80338000
+            }
+          }
+        ],
+        "after": [
+          {
+            "output": [
+              "Test scenario successully complete."
+            ],
+            "match": {
+              "location": "features/support/hooks.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3002535000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 261105000
+            }
+          }
+        ]
+      },
+      {
+        "id": "bbc-registration;inputting-incorrent-birthday-credentials-that-output-different-errors;;4",
+        "keyword": "Scenario Outline",
+        "name": "Inputting incorrent birthday credentials that output different errors",
+        "description": "",
+        "line": 15,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@reg_test_birthday_input",
+            "line": 3
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21000
+            }
+          },
+          {
+            "output": [
+              "Loading Test scenario..."
+            ],
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I access the BBC Register page",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7117052000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click thirteen or over",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2315831000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I input an invalid date of birth value  03 ",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1380128000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I try to continue",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3092403000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I receive the following invalid birthday error: Oops, that day and year don't look right. Make sure it's a real date written as DD-MM-YYYY e.g. the 5th of June 2009 is 05-06-2009.",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 84507000
+            }
+          }
+        ],
+        "after": [
+          {
+            "output": [
+              "Test scenario successully complete."
+            ],
+            "match": {
+              "location": "features/support/hooks.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000688000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 257848000
+            }
+          }
+        ]
+      },
+      {
+        "id": "bbc-registration;inputting-incorrent-birthday-credentials-that-output-different-errors;;5",
+        "keyword": "Scenario Outline",
+        "name": "Inputting incorrent birthday credentials that output different errors",
+        "description": "",
+        "line": 16,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@reg_test_birthday_input",
+            "line": 3
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39000
+            }
+          },
+          {
+            "output": [
+              "Loading Test scenario..."
+            ],
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I access the BBC Register page",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6707076000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click thirteen or over",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2325174000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I input an invalid date of birth value   1990",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1423254000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I try to continue",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3103856000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I receive the following invalid birthday error: Oops, that day and month don't look right. Make sure it's a real date written as DD-MM-YYYY e.g. the 5th of June 2009 is 05-06-2009.",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 75476000
+            }
+          }
+        ],
+        "after": [
+          {
+            "output": [
+              "Test scenario successully complete."
+            ],
+            "match": {
+              "location": "features/support/hooks.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3003257000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 246324000
+            }
+          }
+        ]
+      },
+      {
+        "id": "bbc-registration;inputting-incorrent-birthday-credentials-that-output-different-errors;;6",
+        "keyword": "Scenario Outline",
+        "name": "Inputting incorrent birthday credentials that output different errors",
+        "description": "",
+        "line": 17,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@reg_test_birthday_input",
+            "line": 3
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22000
+            }
+          },
+          {
+            "output": [
+              "Loading Test scenario..."
+            ],
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I access the BBC Register page",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6769871000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click thirteen or over",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2344851000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I input an invalid date of birth value 02 03 ",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1458425000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I try to continue",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3097179000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I receive the following invalid birthday error: Oops, that year doesn't look right. Make sure it's a real date written as DD-MM-YYYY e.g. the 5th of June 2009 is 05-06-2009.",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 74173000
+            }
+          }
+        ],
+        "after": [
+          {
+            "output": [
+              "Test scenario successully complete."
+            ],
+            "match": {
+              "location": "features/support/hooks.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000500000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 264200000
+            }
+          }
+        ]
+      },
+      {
+        "id": "bbc-registration;inputting-incorrent-birthday-credentials-that-output-different-errors;;7",
+        "keyword": "Scenario Outline",
+        "name": "Inputting incorrent birthday credentials that output different errors",
+        "description": "",
+        "line": 18,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@reg_test_birthday_input",
+            "line": 3
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 77000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000
+            }
+          },
+          {
+            "output": [
+              "Loading Test scenario..."
+            ],
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I access the BBC Register page",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6814072000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click thirteen or over",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2337342000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I input an invalid date of birth value 02  1990",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1468605000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I try to continue",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3106092000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I receive the following invalid birthday error: Oops, that month doesn't look right. Make sure it's a real date written as DD-MM-YYYY e.g. the 5th of June 2009 is 05-06-2009.",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 76230000
+            }
+          }
+        ],
+        "after": [
+          {
+            "output": [
+              "Test scenario successully complete."
+            ],
+            "match": {
+              "location": "features/support/hooks.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3001080000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 251730000
+            }
+          }
+        ]
+      },
+      {
+        "id": "bbc-registration;inputting-incorrent-birthday-credentials-that-output-different-errors;;8",
+        "keyword": "Scenario Outline",
+        "name": "Inputting incorrent birthday credentials that output different errors",
+        "description": "",
+        "line": 19,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@reg_test_birthday_input",
+            "line": 3
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18000
+            }
+          },
+          {
+            "output": [
+              "Loading Test scenario..."
+            ],
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I access the BBC Register page",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6726841000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click thirteen or over",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2256861000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I input an invalid date of birth value  03 1990",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1434418000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I try to continue",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3102660000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I receive the following invalid birthday error: Oops, that day doesn't look right. Make sure it's a real date written as DD-MM-YYYY e.g. the 5th of June 2009 is 05-06-2009.",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 88116000
+            }
+          }
+        ],
+        "after": [
+          {
+            "output": [
+              "Test scenario successully complete."
+            ],
+            "match": {
+              "location": "features/support/hooks.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3001349000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 267241000
+            }
+          }
+        ]
+      },
+      {
+        "id": "bbc-registration;inputting-incorrent-birthday-credentials-that-output-different-errors;;9",
+        "keyword": "Scenario Outline",
+        "name": "Inputting incorrent birthday credentials that output different errors",
+        "description": "",
+        "line": 20,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@reg_test_birthday_input",
+            "line": 3
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22000
+            }
+          },
+          {
+            "output": [
+              "Loading Test scenario..."
+            ],
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I access the BBC Register page",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6645031000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click thirteen or over",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2322823000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I input an invalid date of birth value a b c",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1432086000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I try to continue",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3108065000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I receive the following invalid birthday error: Oops, that date doesn't look right. Make sure it's a real date written as DD-MM-YYYY e.g. the 5th of June 2009 is 05-06-2009.",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 83030000
+            }
+          }
+        ],
+        "after": [
+          {
+            "output": [
+              "Test scenario successully complete."
+            ],
+            "match": {
+              "location": "features/support/hooks.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000319000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 244651000
+            }
+          }
+        ]
+      },
+      {
+        "id": "bbc-registration;inputting-an-invalid-postcode-credential-whilst-all-other-credentials-are-correct-shows-an-error;;2",
+        "keyword": "Scenario Outline",
+        "name": "Inputting an invalid postcode credential whilst all other credentials are correct shows an error",
+        "description": "",
+        "line": 33,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@reg_test_postcode_input",
+            "line": 22
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27000
+            }
+          },
+          {
+            "output": [
+              "Loading Test scenario..."
+            ],
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I access the BBC Register page",
+            "line": 24,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6786583000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click thirteen or over",
+            "line": 25,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2327464000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I input valid birthday values for all three fields and click continue 02 03 1990",
+            "line": 26,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5940995000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I input valid values for every necessary field except the postcode field a98yhn32 TW10 Male",
+            "line": 27,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8217948000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I try to register",
+            "line": 28,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3525819000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I receive the following invalid postcode error: Sorry, that postcode's too short. Please check it's a proper postcode.",
+            "line": 29,
+            "match": {
+              "location": "features/step_definitions/bbc_registration_step_defs.rb:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 76233000
+            }
+          }
+        ],
+        "after": [
+          {
+            "output": [
+              "Test scenario successully complete."
+            ],
+            "match": {
+              "location": "features/support/hooks.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3001800000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 242284000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
