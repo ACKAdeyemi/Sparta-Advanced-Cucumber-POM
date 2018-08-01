@@ -2,84 +2,93 @@
 
 #### Task:
 
-To create an advanced Page Object Model using Cucumber, creating an automated user journey through a website and test for expected failures.
+To create an advanced Page Object Model using Cucumber, creating an automated user journey through a website and test for expected failures manipulating Cucumber tables using REGEX and GREP to get data from tables and pass them to the tests, ultimately making code D.R.Y. Also try to include the use of hooks and tags where possible.
 
 This task makes use of:
 
 * Ruby
 * Cucumber (for web automation)
+* Cucumber tables
 * RSpec (for testing)
 * [Minute Inbox](https://www.minuteinbox.com)
 
-**How to Download** - click 'clone or download' button, download a zip of our project, unzip, open the index.html and enjoy.
+**How to Download** - click 'clone or download' button, download a zip of our project, unzip, run the following in the terminal to view the automated tests (must be in cucumber-advanced-POM directory):
 
-<!-- EXAMPLE BELOW -->
+To run tests for:
+* Registration feature tests only -  `cucumber feature/bbc_registration.feature`
+* Login feature tests only - `cucumber feature/bbc_login.feature`
+* All scenarios/tests (order can be altered by changing tag order) - `cucumber -t @reg_test_birthday_input, @reg_test_postcode_input, @login_test_incorrect_email_password, @login_test_incorrect_email, @login_test_incorrect_password`
+* One scenario (change tag for other scenarios) - `cucumber -t @reg_test_birthday_input`
 
 #### Challenges:
-Something that I thought to be interesting was to add dynamic email functionality to ease the automation process rather than having to constantly change the email used to prove that the registration process works, getting locked out of account due to too many incorrect log in attempts, etc.
-
-I knew I'd need to be able to switch tabs as I'd need the email taken from the Minute Inbox tab to remain, so I conducted some research via Google and came to the following solution:
-
-### <p align="center"> Class created with methods to control tabs in one window </p>
-
-
+Something that I found quite difficult was passing multiple arguments into one test step. Eventually after much research, trial and error, and help from my peers, I was able to provide the following solution to my challenge:
 
 ```ruby
+# Code Snippet of date of birth arguments on second And step (from bbc_registration.feature file)
+@reg_test_birthday_input
+Scenario Outline: Inputting incorrent birthday credentials that output different errors
+  Given I access the BBC Register page
+    And I click thirteen or over
+    And I input an invalid date of birth value <dd> <mm> <yyyy>
+  When I try to continue
+  Then I receive the following invalid birthday error: <error>
 
-# Code Snippet of methods from my TabControl class (in tab_control.rb)
+  Examples:
+  | dd | mm | yyyy | error |
+  |  |  |  | Oops, that date doesn't look right. Make sure it's a real date written as DD-MM-YYYY e.g. the 5th of June 2009 is 05-06-2009. |
+```
 
-require 'capybara/dsl'
+```ruby
+# Code Snippet of refactored date of birth method (from bbc_registration.rb file)
+def enter_date_of_birth(dd,mm,yyyy)
+  fill_in BIRTHDAY_DAY, with: "#{dd}"
+  fill_in BIRTHDAY_MONTH, with: "#{mm}"
+  fill_in BIRTHDAY_YEAR, with: "#{yyyy}"
+  sleep 1
+  # arguments are string interpolated to ensure the variables are ouptut as strings
+end
 
-class TabControl
-  include Capybara::DSL
+# ====== PREVIOUS VERSION OF CODE ======
+def choose_birthday_day(day)
+    fill_in BIRTHDAY_DAY, with: day
+  end
 
-  def switch_to_tab_one
-    page.switch_to_window(page.windows[0])
+  def choose_birthday_month(month)
+    fill_in BIRTHDAY_MONTH, with: month
+  end
+
+  def choose_birthday_year(year)
+    fill_in BIRTHDAY_YEAR, with: year
     sleep 1
   end
+```
 
-  def switch_to_tab_two
-    page.switch_to_window(page.windows[1])
-    sleep 1
-  end
-
-  def refresh_tab
-    page.driver.browser.navigate.refresh
-  end
-
-  def close_tab
-    page.driver.browser.close
-  end
-
-  def wait(num)
-    sleep num
-  end
-
+```ruby
+# Code snippet of step definition using RegEx
+Given(/^I input an invalid date of birth value (.*) (.*) (.*)$/) do |dd,mm,yyyy|
+  @bbc_site.bbc_registration.enter_date_of_birth(dd,mm,yyyy)
 end
 ```
 
-### <p align="center"> The method below is used in conjunction with the methods above to control what happens at particular stages through the user journey </p>
+I also implemented this solution on the @reg_test_postcode_input scenario test, allowing me to also refactor the methods for this test.
 
-```ruby
-# Code snippet of method in used within BBC_Homepage class (in bbc_homepage.rb)
+### <p align="center"> Login Test Report Screenshot </p>
+![Login Test Report Screenshot](features/reports/login-test-report-screenshot.png)
 
-# constants
-HOMEPAGE_URL = 'http://www.bbc.co.uk'
-
-def visit_home_page
-  window = page.driver.browser.window_handles
-
-  if window.size < 2
-    page.driver.open_new_window
-    page.switch_to_window(page.windows[1])
-  end
-
-  visit(HOMEPAGE_URL)
-  sleep 2
-end
-```
+### <p align="center"> Registration Test Report Screenshot </p>
+![Registration Test Report Screenshot](features/reports/registration-test-report-screenshot.png)
 
 <hr>
 
 #### Summary:
-I am quite pleased with this homework task as it enabled me to go above and beyond what was required allowing me to push myself to learn new things and implement something that functions well and makes life easier.
+I am quite pleased with this homework task as it helped to cement my learning regarding:
+
+* TDD (Test Driven Development)
+* TDD Cycle - Red/Green/Refactor
+* BDD (Behaviour Driven Development)
+* The testing process in general (the practical elements)
+* Best practices
+* The different perspectives that individuals have regarding what test for and the importance of collaboration/collecting different points of view
+* Refactoring
+* Automated Testing
+* How testing might look in the work place

@@ -14,12 +14,12 @@ class BBC_Login
   end
 
   def fill_email(email)
-    fill_in EMAIL_USERNAME_INPUT, with: (email)
+    fill_in EMAIL_USERNAME_INPUT, with: "#{email}"
     sleep 1
   end
 
   def fill_password(password)
-    fill_in PASSWORD_INPUT, with: (password)
+    fill_in PASSWORD_INPUT, with: "#{password}"
     sleep 1
   end
 
